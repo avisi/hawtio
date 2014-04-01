@@ -123,22 +123,39 @@
           <webAppConfig>
             <contextPath>${context}</contextPath>
           </webAppConfig>
+          <jettyXml>jetty.xml</jettyXml>
           <connectors>
             <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
               <port>${jettyPort}</port>
               <maxIdleTime>60000</maxIdleTime>
             </connector>
           </connectors>
-          <systemProperties>
-            <systemProperty>
-              <key>hawtio.config.dir</key>
-              <value>${hawtio-config-dir}</value>
-            </systemProperty>
-            <systemProperty>
-              <key>hawtio.config.repo</key>
-              <value>${hawtio-config-repo}</value>
-            </systemProperty>
-          </systemProperties>
+            <systemProperties>
+                <systemProperty>
+                    <key>hawtio.config.dir</key>
+                    <value>${hawtio-config-dir}</value>
+                </systemProperty>
+                <systemProperty>
+                    <key>hawtio.config.repo</key>
+                    <value>${hawtio-config-repo}</value>
+                </systemProperty>
+                <systemProperty>
+                    <key>hawtio.authenticationEnabled</key>
+                    <value>true</value>
+                </systemProperty>
+                <systemProperty>
+                    <key>hawtio.realm</key>
+                    <value>mothership</value>
+                </systemProperty>
+                <systemProperty>
+                    <key>hawtio.role</key>
+                    <value>admin</value>
+                </systemProperty>
+                <systemProperty>
+                    <name>java.security.auth.login.config</name>
+                    <value>${basedir}/jetty.conf</value>
+                </systemProperty>
+            </systemProperties>
         </configuration>
       </plugin>
       <plugin>
