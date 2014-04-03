@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<users>
+    <userList>
+        <user>
+            <connectionList>
+                <connections>
+                    <connectionName>surveillance</connectionName>
+                    <host>localhost</host>
+                    <password>test</password>
+                    <path>jolokia</path>
+                    <port>8181</port>
+                    <scheme>http</scheme>
+                    <useProxy>true</useProxy>
+                    <userName></userName>
+                </connections>
+            </connectionList>
+            <userName>vincent</userName>
+        </user>
+        <user>
+            <connectionList>
+                <connections>
+                    <connectionName>test</connectionName>
+                    <host>localhost</host>
+                    <password>test</password>
+                    <path>jolokia</path>
+                    <port>8182</port>
+                    <scheme>http</scheme>
+                    <useProxy>true</useProxy>
+                    <userName></userName>
+                </connections>
+				  <connections>
+                    <connectionName>test2</connectionName>
+                    <host>129.231.232.12</host>
+                    <password>test</password>
+                    <path>jolokia</path>
+                    <port>8080</port>
+                    <scheme>http</scheme>
+                    <useProxy>true</useProxy>
+                    <userName>henk</userName>
+                </connections>
+            </connectionList>
+            <userName>test</userName>
+        </user>
+    </userList>
+</users>
