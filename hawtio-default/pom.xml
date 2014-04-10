@@ -132,12 +132,20 @@
           </connectors>
             <systemProperties>
                 <systemProperty>
+                <key>hawtio.offline</key>
+                <value>false</value>
+            </systemProperty>
+                <systemProperty>
                     <key>hawtio.config.dir</key>
                     <value>${hawtio-config-dir}</value>
                 </systemProperty>
                 <systemProperty>
                     <key>hawtio.config.repo</key>
-                    <value>${hawtio-config-repo}</value>
+                    <value>https://github.com/hawtio/hawtio-config.git</value>
+                </systemProperty>
+                <systemProperty>
+                    <key>hawtio.config.cloneOnStartup</key>
+                    <value>true</value>
                 </systemProperty>
                 <systemProperty>
                     <key>hawtio.authenticationEnabled</key>
@@ -156,6 +164,8 @@
                     <value>${basedir}/jetty.conf</value>
                 </systemProperty>
             </systemProperties>
+            <stopKey/>
+            <stopPort/>
         </configuration>
       </plugin>
       <plugin>

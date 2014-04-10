@@ -65,7 +65,31 @@
       <artifactId>commons-codec</artifactId>
       <version>${commons-codec-version}</version>
     </dependency>
-
+      <!-- Git Library -->
+      <dependency>
+          <groupId>org.eclipse.jgit</groupId>
+          <artifactId>org.eclipse.jgit</artifactId>
+          <version>${jgit-version}</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>org.gitective</groupId>
+          <artifactId>gitective-core</artifactId>
+          <version>${gitective-version}</version>
+          <exclusions>
+              <exclusion>
+                  <groupId>org.eclipse.jgit</groupId>
+                  <artifactId>org.eclipse.jgit</artifactId>
+              </exclusion>
+          </exclusions>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.jcraft</groupId>
+          <artifactId>jzlib</artifactId>
+          <version>${jcraft-jzlib-version}</version>
+          <scope>provided</scope>
+      </dependency>
     <!-- testing -->
     <dependency>
       <groupId>io.hawt</groupId>
